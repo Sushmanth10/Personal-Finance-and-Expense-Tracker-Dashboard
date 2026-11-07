@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="src/Project_logo.png">
+    <title>Its Personal</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div id="first_div">
+        <video id="video" src="src/financial.mp4" autoplay muted loop></video>
+        <span
+            style="position: relative;height: 100%; color: white;display: flex;align-items: center;text-indent: 40px;font-size: 40px;">Its
+            Personal</span>
+        <span id="username_span" style="position: absolute;top: 40%; color: white;
+        right: 60px;transform: translateY(-50%);">username: <b>Guest</b> </span>
+        <span id="email_span" style="position: absolute;top: 60%;color: white;right: 60px;z-index: 2;">
+            guest@gmail.com
+        </span>
+    </div>
+    <div id="second_div">
+        <!-- <span style="height: 100%;display: flex;text-align: center;justify-content: flex-end; align-items: center;margin-left: auto;top: 50%;">sush</span> -->
+        <div style="display: grid;margin-top: 30px;margin-bottom: 30px;">
+            <p style="margin: 0;font-weight: 700;">Total Balance</p>
+            <p style="margin: 0;font-size: 18px;font-weight: 400;">0.00 </p>
+        </div>
+        <div style="display: grid;margin-top: 30px;margin-bottom: 30px;">
+            <p style="margin: 0;font-weight: 700;">Income</p>
+            <p style="margin: 0;font-size: 18px;font-weight: 400;">0.00 </p>
+        </div>
+        <div style="display: grid;margin-top: 30px;margin-bottom: 30px;">
+            <p style="margin: 0;font-weight: 700;">Expenses</p>
+            <p style="margin: 0;font-size: 18px;font-weight: 400px;">0.00</p>
+        </div>
+    </div>
+    <div>
+        <h3>Find anything</h3>
+        <p>
+            <span>
+                <input type="number">
+                <select name="" id="">
+                    <option value="">--Catergories--</option>
+                    <option value="">Friend1</option>
+                    <option value="">Friend2</option>
+                    <option value="">Friend3</option>
+                    <option value="">Friend4</option>
+                </select>
+                <input type="checkbox">Income
+                <input type="checkbox">Expenses
+                <input type="date">&nbsp;&nbsp;
+                <input type="button" value="+">Add
+            </span>
+            <span style="width: 100%;text-align: end;">
+                <button style="text-align: end;">Submit</button>
+            </span>
+        </p>
+    </div>
+    <div id="third_div">
+        <h3>Recent transactions List</h3>
+        <span style="display: flex;gap: 60px;">
+            <p>Transaction</p>
+            <p>Amount</p>
+            <p>Catergory</p>
+            <p>Type</p>
+            <p>Date</p>
+            <button style="width: 80px;height: 30px;display: flex;text-align: center;justify-content: center;align-self: center;padding-top: 8px;border-radius: 10px;background-color: red;color: white;border: transparent;">Delete</button>
+        </span>
+    </div>
+</body>
+
+</html>
