@@ -1,0 +1,256 @@
+:root {
+  --bg-color: #f3f4f6;
+  --card-bg: #ffffff;
+  --text-primary: #1a1a2a;
+  --text-secondary: #6b7280;
+  --border-color: #e5e7eb;
+  --primary: #3b82f6;
+  --income: #10b981;
+  --expense: #ef4444;
+  --warning: #f59e0b;
+}
+
+[data-theme="dark"] {
+  --bg-color: #000000;
+  --card-bg: #4f15344f;
+  --text-primary: #f9fafb;
+  --text-secondary: #9ca3af;
+  --border-color: #374151;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+  background-color: var(--bg-color);
+  color: var(--text-primary);
+  transition: background-color 0.5s, color 0.5s;
+  padding: 20px;
+}
+
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.theme-btn {
+  background: var(--card-bg);
+  color: var(--text-primary);
+  border: 1px solid var(--border-color);
+  padding: 10px 14px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 1.1rem;
+}
+
+/* Stats Cards */
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 16px;
+}
+
+.stat-card {
+  background: var(--card-bg);
+  padding: 20px;
+  border-radius: 12px;
+  border: 1px solid var(--border-color);
+}
+
+.stat-card h3 {
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+  margin-bottom: 8px;
+}
+
+.stat-card p {
+  font-size: 1.6rem;
+  font-weight: 700;
+}
+
+.stat-card.income p {
+  color: var(--income);
+}
+
+.stat-card.expense p {
+  color: var(--expense);
+}
+
+/* Main Form + Chart Grid */
+.main-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+}
+
+@media (max-width: 768px) {
+  .main-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.card {
+  background: var(--card-bg);
+  padding: 24px;
+  border-radius: 12px;
+  border: 1px solid var(--border-color);
+}
+
+.card h2 {
+  margin-bottom: 16px;
+  font-size: 1.2rem;
+}
+
+.form-group {
+  margin-bottom: 14px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.radio-group {
+  display: flex;
+  gap: 16px;
+}
+
+input[type="text"],
+input[type="number"],
+select {
+  padding: 10px 12px;
+  border-radius: 8px;
+  border: 1px solid var(--border-color);
+  background: var(--bg-color);
+  color: var(--text-primary);
+  font-size: 0.95rem;
+}
+
+.btn-primary {
+  width: 100%;
+  padding: 12px;
+  background-color: var(--primary);
+  color: #ffffff;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  margin-top: 8px;
+}
+
+.btn-danger {
+  padding: 8px 14px;
+  background-color: var(--expense);
+  color: #ffffff;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.chart-wrapper {
+  position: relative;
+  height: 260px;
+}
+
+/* History Section */
+.history-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-bottom: 16px;
+}
+
+.controls {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.expenses-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.expense-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 14px;
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  background: var(--bg-color);
+}
+
+.expense-info h4 {
+  margin-bottom: 4px;
+}
+
+.expense-meta {
+  display: flex;
+  gap: 10px;
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+  align-items: center;
+}
+
+.category-badge {
+  background: var(--primary);
+  color: #fff;
+  padding: 2px 8px;
+  border-radius: 12px;
+  font-size: 0.75rem;
+}
+
+.expense-amount {
+  font-weight: 700;
+  font-size: 1.1rem;
+  color: var(--expense);
+}
+
+.expense-amount.income-amount {
+  color: var(--income);
+}
+
+.expense-actions {
+  display: flex;
+  gap: 8px;
+}
+
+.edit-btn,
+.delete-btn {
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  font-size: 1rem;
+  padding: 6px;
+}
+
+.edit-btn {
+  color: var(--warning);
+}
+
+.delete-btn {
+  color: var(--expense);
+}
+
+.no-expenses {
+  text-align: center;
+  color: var(--text-secondary);
+  padding: 24px;
+}
